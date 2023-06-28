@@ -72,9 +72,9 @@ const ContactForm = (props:ContactFormProps) => {
                             original = 'original'
                         />
 
-                        <div contentEditable = 'true'>
+                        <div>
                             <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-white' htmlFor="make">God please work</label>
-                            <input type='text' value ='john' className = 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' name = 'work' />
+                            <input type='text' defaultValue ='john'/>
                         </div>
 
                         <div className ='flex justify-between pt-4'>  
