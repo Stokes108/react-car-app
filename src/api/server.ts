@@ -49,7 +49,7 @@ export const server_calls = {
         return await response.json() 
     },
     delete : async ( id: string) => {
-        const response = await fetch(`https://car-app-0se9.onrender.com/api/cars/${id}`,
+        const response = await fetch(`https://car-app-0se9.onrender.com/api/car/${id}`,
         {
             method: "DELETE",
             headers: {
@@ -61,5 +61,20 @@ export const server_calls = {
             throw new Error('Failed to create new data on the server')
         }
         return
+    },
+    getSingle : async ( id: string) => {
+        const response = await fetch(`https://car-app-0se9.onrender.com/api/car/${id}`,
+        {
+            method: "GET",
+            headers: {
+                'Content-Type' : 'application/json',
+                'x-access-token' : `Bearer ${api_token}`,
+            },
+        });
+        if (!response.ok){
+            throw new Error('Failed to create new data on the server')
+        }
+        return await response.json() 
     }
+
 }

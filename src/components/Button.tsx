@@ -9,8 +9,8 @@ interface ButtonType{
 
 const Button = (props : ButtonType) => {
   return (
-    <div className="p-3">
-        <button onClick = {props.onClick}type="button" className="text-gray-800 hover:text-white border border-gray-800 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+    <div className="pt-4">
+        <button onClick = {props.onClick} type="button" className="text-gray-800 bg-gray-400 hover:text-white  border-gray-800 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
             {props.children}
         </button>
 
